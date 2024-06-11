@@ -21,6 +21,4 @@ jobs:
       - name: Build with Maven
         run: mvn -B package --file pom.xml
       - name: Check code coverage
-        run: |
-          wget https://github.com/fjacquet/jacoco-checker/releases/download/v1.0.0/jacoco-checker-1.0.0.jar
-          java -jar jacoco-checker-1.0.0.jar --reportPath target/site/jacoco/jacoco.xml --limit 0.8
+        run: mvn jacoco:check

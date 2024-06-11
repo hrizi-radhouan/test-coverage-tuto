@@ -21,4 +21,4 @@ jobs:
       - name: Build with Maven
         run: mvn -B package --file pom.xml
       - name: Check code coverage
-        run: mvn jacoco:check
+        run: mvn -X jacoco:check
